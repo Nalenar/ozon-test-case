@@ -3,6 +3,46 @@
   --lineWidth: 10px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 5px;
+}
+
+#progress-value {
+  width: 40px;
+  border-radius: 34px;
+  outline: none;
+  border: 1px solid #000;
+  text-align: center;
+  padding: 0;
+}
+
+#progress-value:focus {
+  border-color: #005cff;
+}
+
 .progress-bar {
   --progressInDeg: calc(((var(--progress) * 360) / 100) * 1deg);
 
@@ -92,4 +132,10 @@ input:checked + .slider:before {
   -webkit-transform: translateX(20px);
   -ms-transform: translateX(20px);
   transform: translateX(20px);
+}
+
+@media (orientation: landscape) {
+    main {
+        flex-direction: row;
+    }
 }
