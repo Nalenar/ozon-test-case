@@ -135,7 +135,7 @@ input:checked + .slider:before {
 }
 
 @media (orientation: landscape) {
-    main {
-        flex-direction: row;
-    }
+  main {
+    flex-direction: row;
+  }
 }
