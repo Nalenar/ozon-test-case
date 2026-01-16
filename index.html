@@ -8,14 +8,11 @@
   </head>
   <body>
     <main>
-      <div
-        class="progress-bar animation-rotate"
-        style="--progress: 25"
-      >
+      <div class="progress-bar" style="--progress: 25">
         <div class="progress-bg"></div>
       </div>
       <div>
-        <input type="number" id="progress-value" />
+        <input type="number" id="progress-value" max="100" min="0" value="25" />
         <label for="progress-value">Value</label>
       </div>
       <div>
@@ -27,5 +24,7 @@
         <label for="hide-check">Hide</label>
       </div>
     </main>
+
+    <script src="index.js"></script>
   </body>
 </html>
