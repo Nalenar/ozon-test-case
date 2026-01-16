@@ -1,0 +1,30 @@
+:root {
+  --size: 130px;
+  --lineWidth: 10px;
+}
+
+.progress-bar {
+  --progressInDeg: calc(((var(--progress) * 360) / 100) * 1deg);
+
+  width: var(--size);
+  background: conic-gradient(
+    #005cff,
+    #005cff var(--progressInDeg),
+    #eaf0f6 var(--progressInDeg),
+    #eaf0f6
+  );
+}
+
+.progress-bg {
+  width: calc(var(--size) - 2 * var(--lineWidth));
+  background: #fff;
+}
+
+.progress-bar,
+.progress-bg {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
