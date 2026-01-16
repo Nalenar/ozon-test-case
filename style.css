@@ -44,15 +44,8 @@ input[type="number"]:focus {
 }
 
 .progress-bar {
-  --progressInDeg: calc(((var(--progress) * 360) / 100) * 1deg);
-
   width: var(--size);
-  background: conic-gradient(
-    #005cff,
-    #005cff var(--progressInDeg),
-    #eaf0f6 var(--progressInDeg),
-    #eaf0f6
-  );
+  background: #eaf0f6;
 }
 
 .progress-bg {

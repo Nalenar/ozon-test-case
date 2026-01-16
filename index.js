@@ -1,17 +1,20 @@
 const progressBar = document.querySelector(".progress-bar");
 const progressInput = document.getElementById("progress-value");
-const animateToggle = document.getElementById("animate-check");
-const hideToggle = document.getElementById("hide-check");
 
 progressInput.addEventListener("input", function () {
-  const currentInputValue = this.value;
-  progressBar.setAttribute("style", `--progress: ${currentInputValue || 0}`);
+  const progressInDeg = (this.value * 360) / 100;
+  progressBar.style = `background: conic-gradient(
+    #005cff,
+    #005cff ${progressInDeg}deg,
+    #eaf0f6 ${progressInDeg}deg,
+    #eaf0f6
+  );`;
 });
 
-animateToggle.addEventListener("change", function () {
+const switchAnimateState = () => {
   progressBar.classList.toggle("animation-rotate");
-});
+};
 
-hideToggle.addEventListener("change", function () {
+const switchHideState = () => {
   progressBar.classList.toggle("hidden");
-});
+};
