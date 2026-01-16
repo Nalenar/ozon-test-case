@@ -4,13 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/ProgressBar/progressBar.css" />
     <title>OZON | Progress Bar</title>
   </head>
   <body>
     <main>
+      <!-- Progress Bar -->
       <div class="progress-bar">
         <div class="progress-bg"></div>
       </div>
+      <!-- End -->
       <div class="options-container">
         <div>
           <input
@@ -24,29 +27,29 @@
         </div>
         <div>
           <label class="switch">
-            <input
-              type="checkbox"
-              id="animate-check"
-              onchange="switchAnimateState()"
-            />
+            <input type="checkbox" id="animate-check" />
             <span class="slider"></span>
           </label>
           <label for="animate-check">Animate</label>
         </div>
         <div>
           <label class="switch">
-            <input
-              type="checkbox"
-              id="hide-check"
-              onchange="switchHideState()"
-            />
+            <input type="checkbox" id="hide-check" />
             <span class="slider"></span>
           </label>
           <label for="hide-check">Hide</label>
         </div>
       </div>
+      <div class="buttons">
+        <button onclick="progressBar.setValue(30)">setValue(30)</button>
+        <button onclick="progressBar.setValue(70)">setValue(70)</button>
+        <button onclick="progressBar.increment(10)">increment(10)</button>
+        <button onclick="progressBar.decrement(10)">decrement(10)</button>
+        <button onclick="progressBar.reset()">reset()</button>
+      </div>
     </main>
 
+    <script src="/ProgressBar/progressBar.js"></script>
     <script src="index.js"></script>
   </body>
 </html>

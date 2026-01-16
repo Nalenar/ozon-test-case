@@ -1,0 +1,37 @@
+:root {
+  --size: 130px;
+  --lineWidth: 10px;
+}
+
+.progress-bar {
+  width: var(--size);
+  background: #eaf0f6;
+}
+
+.progress-bg {
+  width: calc(var(--size) - 2 * var(--lineWidth));
+  background: #fff;
+}
+
+.progress-bar,
+.progress-bg {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.animation-rotate {
+  animation: rotate 2s infinite;
+}
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
